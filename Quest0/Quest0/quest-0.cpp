@@ -103,7 +103,7 @@ void printGameOver (string currentGuess) {
     */
 }
 
-void printGameBoard (string guess) {
+void printGameBoard(string guess) {
     /*
         This function will print out a rectangle to contain the
         current guess and the line
@@ -111,6 +111,10 @@ void printGameBoard (string guess) {
         The width of the box is the length of the guess string + 2*padding.
         The padding defines the number of spaces on either side of the underline
     */
+    cout << "+------------+" << endl;
+    cout << "|            |" << endl;
+    cout << "|            |" << endl;
+    cout << "+------------+" << endl;
 }
 
 void printNumberOfTries () {
