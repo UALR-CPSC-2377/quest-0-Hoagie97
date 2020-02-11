@@ -111,16 +111,27 @@ void printGameBoard(string guess) {
         The width of the box is the length of the guess string + 2*padding.
         The padding defines the number of spaces on either side of the underline
     */
-    cout << "+------------+" << endl;
-    cout << "|            |" << endl;
-    cout << "|            |" << endl;
-    cout << "+------------+" << endl;
+    cout << "+";
+    for (int i = 0; i < padding; i++) {
+        cout << "-";
+    }
+    cout << "+" << endl;
+    cout << "|";
+    for (int i = 0; i < padding; i++) {
+        cout << " ";
+    }
+    cout << "|" << endl;
+    for (int i = 0; i < padding; i++) {
+
+    }
+
 }
 
 void printNumberOfTries () {
     /* this function will print out the number of tries that the user has attempted
         as well as a message
     */
+    cout << "NUMBER OF TRIES: " << currentGuessNumber << endl;
 }
 
 char processUserInput () {
@@ -128,6 +139,8 @@ char processUserInput () {
         This function will print out a message for the user to enter a character
         The character will then be returned,
     */
+    cout << "Enter a Guess! : "; 
+    cin >> currentGuessString;
 
     return 'n'; // placeholder
 }
@@ -148,7 +161,7 @@ void pauseConsole () {
 
 void clearConsole () {
     #if defined(WIN32) || defined(_WIN32) || defined(__WIN32) && !defined(__CYGWIN__)
-    	system("cls");
+        system("cls");
     #else
         system("clear");
     #endif
